@@ -1,0 +1,90 @@
+:root {
+    --red: #de1a1a;
+    --black: #000000;
+    --light-color: #555;
+    --green: #0b3f0b;
+
+    --light-gray: #CCCCCC;
+    --black1: #1b1b1b;
+    --white: #FFFFFF;
+
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    --border: 2 rem solid rgba(0, 0, 0, .1);
+    --outline: 1 rem solid rgba(0, 0, 0, .1);
+    --outline-hover: 2 rem solid var(--black);
+
+
+}
+
+
+
+
+
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+/* Order Form Section */
+.order-form {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group input[type="number"] {
+    width: 80px;
+}
+
+textarea {
+    resize: none;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--green);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: var(--black);
+}
+

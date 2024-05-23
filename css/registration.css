@@ -1,0 +1,381 @@
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+}
+body {
+  border-bottom: 0;
+  padding-bottom: 0;
+  background-color: #afd3ad;
+  
+ 
+
+  
+}
+/* Loyalty Registration Form Styles */
+
+.loyalty-registration-form {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.loyalty-registration-form h2 {
+  margin-top: 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #666;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+
+.form-group select {
+  height: 40px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+.loyalty-benefits {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+}
+
+.loyalty-benefits h3 {
+  margin-top: 0;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.loyalty-benefits ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.loyalty-benefits li {
+  margin-bottom: 10px;
+}
+
+.loyalty-benefits strong {
+  font-weight: bold;
+  color: #666;
+}
+/* Loyalty Schemes Container */
+.loyalty-schemes {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Loyalty Scheme Card Styles */
+.loyalty-scheme {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 30%; /* Adjust based on your layout */
+}
+
+.loyalty-scheme h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.loyalty-scheme p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.loyalty-scheme ul {
+    margin-top: 8px;
+}
+
+.loyalty-scheme li {
+    list-style-type: disc;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #666;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .loyalty-scheme {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+footer .container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0px;
+  flex-shrink: 0;
+  position: absolute;
+ 
+  padding: 20px;
+  background-color: #2d2a30;
+  border-top: 1px solid #ddd;
+  
+  
+ 
+  
+
+  
+  
+}
+
+footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer-left-corner {
+  float: left;
+  width: 20%;
+  margin-right: 2%;
+}
+
+
+
+.footer-left-corner p {
+  font-size: 16px;
+  color: #898787;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+ .footer-left-corner strong {
+  font-size: 20px;
+  color: #d5d5d5;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.footer-left-corner p:first-child {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.footer-left-corner h3 {
+  color: #ffffff;
+  font: normal 36px 'Cookie', static;
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-left-corner h3 span {
+  color: #39c427d5;
+}
+
+.col-md-3.footer-icons {
+  margin-top: 25px;
+  
+}
+
+.col-md-3 .footer-icons a {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+.col-md-3 .footer-icons a:hover{
+  color: #4bda41;
+}
+
+
+
+
+footer .col-md-3 {
+  width: 25%;
+  margin-bottom: 20px;
+}
+
+footer h5 {
+ 
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: #54b739;
+  font-size: 16px;
+
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer li {
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+footer a:hover {
+  color: #4bda41;
+}
+
+
+footer .col-md-12{
+  font-size: 14px;
+  color: #908f8f;
+  margin-bottom: 10px;
+  justify-content: center;
+
+}
+
+footer .col-md-12 p {
+  text-align: center;
+}
+.footer-bottom {
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+  clear: both;
+}
+
+*body {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+@media (max-width: 992px) {
+  footer .container {
+      padding: 0 30px;
+  }
+
+  .footer-left-corner {
+      width: 40%;
+      margin-right: 5%;
+  }
+
+  footer .col-md-3 {
+      width: 50%;
+  }
+
+  footer .col-md-12 {
+      text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  footer .container {
+      padding: 0 15px;
+      text-align: center;
+  }
+
+  .footer-left-corner {
+      width: 100%;
+      margin: 0 0 20px;
+  }
+
+  footer .col-md-3 {
+      width: 100%;
+      margin-bottom: 10px;
+  }
+
+  footer .row {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  footer .container {
+      padding: 0 10px;
+  }
+
+  footer h5 {
+      font-size: 14px;
+  }
+
+  footer ul {
+      padding: 0;
+  }
+
+  footer li {
+      font-size: 14px;
+  }
+
+  footer a {
+      font-size: 14px;
+  }
+
+  footer .col-md-12 {
+      font-size: 12px;
+  }
+
+  .footer-bottom {
+      font-size: 12px;
+      padding: 0.5em;
+  }
+
+  .footer-left-corner h3 {
+      font-size: 28px;
+  }
+
+  .footer-left-corner p, .footer-left-corner strong {
+      font-size: 14px;
+  }
+
+  .col-md-3 .footer-icons a {
+      width: 20px;
+      height: 20px;
+      font-size: 16px;
+      line-height: 30px;
+  }
+}

@@ -248,6 +248,15 @@ header {
   margin-left: auto;
   margin-right: auto;
 }
+.venue-box img{
+  transition: transform 0.3s ease-in-out;
+  -moz-transition: transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+}
+
+.venue-box img:hover {
+  transform: scale(1.1); /* Adjust the scaling factor to your preference */
+}
 
 .venues h2 {
   text-align: center;

@@ -256,6 +256,7 @@ header {
     justify-content: center;
 }
 
+
 .about-us-text-container {
     width: 45%;
     box-sizing: border-box;
@@ -376,6 +377,15 @@ p{
   width: 100%;
   height: auto;
   border-radius: 5px;
+}
+.branch-image img {
+  transition: transform 0.3s ease-in-out;
+  -moz-transition: transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+}
+
+.branch-image img:hover {
+  transform: scale(1.1); /* Adjust the scaling factor to your preference */
 }
 .services{
   max-width: 1250px;

@@ -130,7 +130,7 @@ header {
 }
 
 .menu li a:hover {
-    color: #f8da31;
+    color: #71f12d;
     transition: all ease 0.3s;
 }
 /* Dropdown Button */
@@ -180,6 +180,7 @@ header {
 .about-us h1 {
     font-size: 36px;
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .about-us p {
@@ -193,6 +194,7 @@ header {
 .about-us h2 {
     font-size: 30px;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 

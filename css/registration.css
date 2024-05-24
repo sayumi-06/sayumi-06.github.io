@@ -154,6 +154,7 @@ button[type="submit"]:hover {
     }
 }
 
+/* Footer section styles */
 footer .container {
   width: 100%;
   margin: 0 auto;
@@ -301,6 +302,8 @@ footer .col-md-12 p {
   border-bottom: 0;
   padding-bottom: 0;
 }
+
+/* footer responsive styles */
 @media (max-width: 992px) {
   footer .container {
       padding: 0 30px;

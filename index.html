@@ -19,7 +19,7 @@
 
 <body>
 
-   
+    <!--Navigation-->
   <header>
     <nav class="navigation">
       <a href="#"><img src="./Images/home_assets/logo (2).png" alt="My Grocery Store Logo" class="logo"></a>
@@ -45,21 +45,11 @@
         <a href="./login.html" class="user"><i class="fas fa-user"></i><span>0</span></a>
 
       </div>
-      <div class="hamburger">
-        <div><li><a href="./index.html" class="active"><b>Home</b></a></li></div>
-        <div> <li><a href="./about us.html"><b>About us</b></a></li></div>
-        <div>        <li class="dropdown">
-          <a href="#" class="dropbtn"><b>Category</b></a>
-          <div class="dropdown-content">
-            <a href="./vegetbles.html">Vegetables</a>
-           
-            <a href="./dairy.html">Dairy</a>
-            <a href="./cosmetics.html">Cosmetics & Skincare</a>
-          </div>
-        </li></div>
+
     </nav>
   </header>
   <main>
+    <!--main image container-->
     <div class="image-container">
       <img src="./Images/home_assets/main img.png" alt="Main Image">
       <div class="overlay">
@@ -75,6 +65,7 @@
   </div>
 
   </main>
+  <!--description-->
   <div class="container">
     <div class="content">
 
@@ -88,6 +79,7 @@
         </div>
     </div>
 </div>
+<!--Categories-->
   <div class="categoryheading">
     <h2>Shop by Category</h2>
 
@@ -112,7 +104,7 @@
   
 
 
-
+<!--Banner-->
   <div class="banner-row">
     <div class="banner">
         <img src="./Images/home_assets/Vegetables.jpg" alt="Banner 1">
@@ -126,7 +118,7 @@
  
 
 
-    
+    <!--products-->
 <section class="vegetables">
   <h2>Popular products</h2>
   <div class="grid">
@@ -230,14 +222,13 @@
         <li>Provide the freshest and highest quality products</li>
         <li>Ensure customer satisfaction with every purchase</li>
         <li>Offer a wide range of products to meet your needs</li>
-        
         <li>Promote sustainable and eco-friendly practices</li>
     </ol>
     </div> 
     </div> 
      
 <footer>
-  
+  <!--Footer section-->
   <div class="container">
     <div class="row">
       <div class="footer-left-corner">
@@ -300,17 +291,7 @@
     </div>
   </div>
 </footer>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const hamburger = document.querySelector('.hamburger');
-    const menu = document.querySelector('.menu');
 
-    hamburger.addEventListener('click', function() {
-      menu.classList.toggle('active');
-      hamburger.classList.toggle('active');
-    });
-  });
-</script>
 
 </body>
 </html>

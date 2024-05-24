@@ -170,7 +170,45 @@ header {
     cursor: pointer;
     margin-bottom: 10px;
   }
-/* Reset default margin and padding */
+  /* Menu toggle button */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--white);
+}
+
+.menu.active {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    padding: 20px;
+  }
+  
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .menu li {
+    margin: 15px 0;
+  }
+
+  .icons {
+    grid-gap: 15px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
 body, html {
   margin: 0;
   padding: 0;

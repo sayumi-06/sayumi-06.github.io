@@ -20,34 +20,37 @@
 <body>
 
     <!--Navigation-->
-  <header>
-    <nav class="navigation">
-      <a href="#"><img src="./Images/home_assets/logo (2).png" alt="My Grocery Store Logo" class="logo"></a>
-
-      <ul class="menu">
-        <li><a href="./index.html" class="active"><b>Home</b></a></li>
-        <li><a href="./about us.html"><b>About us</b></a></li>
-        <li class="dropdown">
-          <a href="#" class="dropbtn"><b>Category</b></a>
-          <div class="dropdown-content">
-            <a href="./vegetbles.html">Vegetables</a>
-           
-            <a href="./dairy.html">Dairy</a>
-            <a href="./cosmetics.html">Cosmetics & Skincare</a>
-          </div>
-        </li>
-        
-        <li><a href="./order.html"><b>Order</b></a></li>
-        <li><a href="./registration.html"><b>Loyalty registration </b></a></li>
-      </ul>
-      <div class="icons">
-        <a href="./order.html" class="cart"><i class="fas fa-shopping-cart"></i><span>0</span></a>
-        <a href="./login.html" class="user"><i class="fas fa-user"></i><span>0</span></a>
-
+    <header>
+      <!--navigation bar -->
+      <nav class="navigation">
+        <a href="#"><img src="./Images/home_assets/logo (2).png" alt="My Grocery Store Logo" class="logo"></a>
+  
+        <ul class="menu">
+          <li><a href="./index.html" class="active"><b>Home</b></a></li>
+          <li><a href="./about us.html"><b>About us</b></a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn"><b>Category</b></a>
+            <div class="dropdown-content">
+              <a href="./vegetbles.html">Vegetables</a>
+              
+              <a href="./dairy.html">Dairy</a>
+              <a href="./cosmetics.html">Cosmetics & Skincare</a>
+            </div>
+          </li>
+          
+          <li><a href="./order.html"><b>Order</b></a></li>
+          <li><a href="./registration.html"><b>Loyalty registration </b></a></li>
+        </ul>
+        <div class="icons">
+          <a href="./order.html" class="cart"><i class="fas fa-shopping-cart"></i><span>0</span></a>
+          <a href="./login.html" class="user"><i class="fas fa-user"></i><span>0</span></a>
+  
+        </div>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
       </div>
-
-    </nav>
-  </header>
+      </nav>
+    </header>
   <main>
     <!--main image container-->
     <div class="image-container">
@@ -291,7 +294,11 @@
     </div>
   </div>
 </footer>
-
+<script>
+  document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('.menu').classList.toggle('active');
+  });
+</script>
 
 </body>
 </html>

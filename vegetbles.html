@@ -41,6 +41,9 @@
         <a href="./login.html" class="user"><i class="fas fa-user"></i><span>0</span></a>
 
       </div>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
     </nav>
   </header>
   
@@ -353,7 +356,11 @@
           </div>
         </div>
       </footer>
-      
+      <script>
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.menu').classList.toggle('active');
+        });
+    </script>
 
 </body>
 </html>

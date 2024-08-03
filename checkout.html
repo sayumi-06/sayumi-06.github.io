@@ -1,73 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Freshmart Store-order</title>
-        <!--Linking css file-->
-        <link rel="stylesheet" type="text/css" href="./css/checkout.css"/>
-        <link rel="icon" type="image/x-icon" href="./Images/home_assets/logo (2).png">
-
-      
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" >
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
-        
-      </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="./css/checkout.css">
+</head>
 <body>
-    <!-- Order Form Section -->
     <div class="container">
-        <form action="">
-            <div class="row">
-                <div class="col">
-                    <h3 class="title">Billing Address</h3>
-                    <div class="inputBox">
-                        <span>Full Name:</span>
-                        <input type="text" id="first-name" name="first-name" required>
-                    </div>
-                    <div class="inputBox">
-                        <span>Email:</span>
-                        <input type="email" >
-                    </div>
-                    <div class="inputBox">
-                        <span>Address:</span>
-                        <input type="text" >
-                    </div>
-
-                    <div class="flex">
-
-                        <div class="inputBox">
-                            <span>Zip Code:</span>
-                            <input type="text" placeholder="123 456">
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <h3 class="title">Payment</h3>
-                    <div class="inputBox">
-                        <span>Cards Accepted:</span>
-                        <img src="./Images/order_assets/card_img.png" alt="">
-                    </div>
-                    <div class="inputBox">
-                        <span>Name on Card:</span>
-                        <input type="text" >
-                    </div>
-                    <div class="inputBox">
-                        <span>Credit Card Number:</span>
-                        <input type="number" >
-                    </div>
-                    <div class="inputBox">
-                        <span>Exp Month:</span>
-                        <input type="text" >
-                    </div>
-
-                </div>
-            </div>
-            <input type="submit" value="Submit Payment" class="submit-btn">
+        <h2>Checkout</h2>
+        <div id="orderSummary">
+            <!-- Order summary will be displayed here -->
+        </div>
+        <form id="checkoutForm">
+            <h3>Personal Details</h3>
+            <label for="name">Name</label>
+            <input type="text" id="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" required>
+            <h3>Delivery Details</h3>
+            <label for="address">Address</label>
+            <input type="text" id="address" required>
+            <label for="city">City</label>
+            <input type="text" id="city" required>
+            <label for="zip">Zip Code</label>
+            <input type="text" id="zip" required>
+            <h3>Payment Information</h3>
+            <label for="cardNumber">Card Number</label>
+            <input type="text" id="cardNumber" required>
+            <label for="expiryDate">Expiry Date</label>
+            <input type="text" id="expiryDate" required>
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" required>
+            <button type="button" onclick="submitOrder()">Pay</button>
         </form>
-    </div>    
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const orderSummary = JSON.parse(localStorage.getItem('cart')) || [];
+            const summaryDiv = document.getElementById('orderSummary');
 
+            let total = 0;
+            orderSummary.forEach(item => {
+                const p = document.createElement('p');
+                p.textContent = `${item.product} - ${item.quantity} - Rs ${item.totalPrice.toFixed(2)}`;
+                summaryDiv.appendChild(p);
+                total += item.totalPrice;
+            });
+
+            const totalP = document.createElement('p');
+            totalP.textContent = `Total: Rs ${total.toFixed(2)}`;
+            summaryDiv.appendChild(totalP);
+        });
+
+        function submitOrder() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const address = document.getElementById('address').value;
+            const city = document.getElementById('city').value;
+            const zip = document.getElementById('zip').value;
+            const cardNumber = document.getElementById('cardNumber').value;
+            const expiryDate = document.getElementById('expiryDate').value;
+            const cvv = document.getElementById('cvv').value;
+
+            if (name && email && phone && address && city && zip && cardNumber && expiryDate && cvv) {
+                alert(`Thank you for your purchase! Your order will be delivered by ${new Date().toLocaleDateString()}.`);
+                localStorage.removeItem('cart');
+                window.location.href = 'index.html';
+            } else {
+                alert('Please fill out all fields.');
+            }
+        }
+    </script>
 </body>
 </html>

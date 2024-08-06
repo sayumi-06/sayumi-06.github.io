@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalPriceElement = document.getElementById('totalPrice');
     const addToFavouritesButton = document.getElementById('addToFavourites');
     const applyFavouritesButton = document.getElementById('applyFavourites');
+    const clearCartButton = document.getElementById('clearCart');
 
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -69,7 +70,22 @@ document.addEventListener('DOMContentLoaded', () => {
         const favouriteOrder = JSON.parse(localStorage.getItem('favouriteOrder')) || [];
         cart = favouriteOrder;
         updateCart();
+        fillOrderForm(favouriteOrder);
     });
+    
+
+    function fillOrderForm(favouriteOrder) {
+        const firstItem = favouriteOrder[0]; // Example to fill form based on the first item in favourite
+
+        if (firstItem) {
+            document.getElementById('name').value = "John Doe"; // Example name, you can change it as needed
+            document.getElementById('email').value = "johndoe@example.com"; // Example email
+            document.getElementById('phone').value = "1234567890"; // Example phone number
+            document.getElementById('address').value = "123 Example Street"; // Example address
+            document.getElementById('city').value = "Colombo"; // Example city
+            document.getElementById('zip').value = "10000"; // Example zip code
+        }
+    }
 
     updateCart();
     document.getElementById('clearCartButton').addEventListener('click', () => {

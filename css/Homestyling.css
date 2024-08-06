@@ -814,24 +814,8 @@ footer .col-md-12 p {
 }
 
 @media (max-width: 992px) {
-  .navigation {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 20px;
-  }
-
-  .menu {
-      flex-direction: column;
-      width: 100%;
-  }
-
-  .menu li {
-      margin-bottom: 10px;
-  }
-
-  .icons {
-      margin-top: 20px;
-  }
+  
+ 
 
   .store-info {
       margin-left: -300px;
@@ -877,17 +861,7 @@ footer .col-md-12 p {
 }
 
 @media (max-width: 768px) {
-  .navigation {
-      padding: 15px;
-  }
-
-  .menu li a {
-      font-size: 14px;
-  }
-
-  .icons {
-      grid-gap: 15px;
-  }
+  
 
   .store-info {
       margin-left: -100px;
@@ -931,18 +905,7 @@ font-size: 28px;}
 }
 
 @media (max-width: 576px) {
-  .navigation {
-      padding: 10px;
-  }
-
-  .menu li a {
-      font-size: 12px;
-  }
-
-  .icons a {
-      width: 30px;
-      height: 30px;
-  }
+ 
 
   .store-info {
       margin-left: 0;

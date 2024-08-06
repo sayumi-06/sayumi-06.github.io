@@ -32,7 +32,7 @@
             <label for="zip">Cards Accepted : </label>
             <div class="inputBox">
                 
-                <img src="./Images/order_assets/card_img.png" alt="">
+                <img src="./Images/order_assets/card_img.png" alt="card">
             </div>
             <label for="cardNumber">Card Number</label>
             <input type="text" id="cardNumber" required>
@@ -43,6 +43,7 @@
             <button type="button" onclick="submitOrder()">Pay</button>
         </form>
     </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const orderSummary = JSON.parse(localStorage.getItem('cart')) || [];

@@ -250,7 +250,7 @@ header {
     margin-bottom: 10px;
 }
 
-.add-to-cart, #buyNow, #addToFavourites, #applyFavourites {
+.add-to-cart, #buyNow, #addToFavourites, #applyFavourites, #clearCartButton{
     display: inline-block;
     background-color: #4ead47;
     color: #fff;
@@ -826,3 +826,5 @@ header {
 }
 
 /* Default Styling (Above 1200px) */
+
+

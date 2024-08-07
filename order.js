@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalPriceElement = document.getElementById('totalPrice');
     const addToFavouritesButton = document.getElementById('addToFavourites');
     const applyFavouritesButton = document.getElementById('applyFavourites');
-    const clearCartButton = document.getElementById('clearCart');
+    const clearCartButton = document.getElementById('clearCartButton');
 
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -72,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCart();
         fillOrderForm(favouriteOrder);
     });
-    
 
     function fillOrderForm(favouriteOrder) {
         const firstItem = favouriteOrder[0]; // Example to fill form based on the first item in favourite
@@ -87,10 +86,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    updateCart();
-    document.getElementById('clearCartButton').addEventListener('click', () => {
-        localStorage.removeItem('cart');
-        document.getElementById('orderSummary').innerHTML = '';
+    // Updated code for clearing the cart
+    clearCartButton.addEventListener('click', () => {
+        cart = []; // Clear the cart array
+        updateCart(); // Update the UI
+        localStorage.removeItem('cart'); // Remove the cart from localStorage
         alert('Cart has been cleared.');
     });
+
+    updateCart();
 });

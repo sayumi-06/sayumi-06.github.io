@@ -272,9 +272,9 @@ header {
 .vegetable:hover {
   transform: scale(1.1); /* Adjust the scaling factor to your preference */
 }
-.vegetables h2{
+.vegetables h3{
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .vegetable img {
@@ -285,11 +285,12 @@ header {
 
 .add-to-cart {
     display: inline-block;
-    background-color: #37e12a;
+    background-color: #4ead47;
     color: #fff;
     padding: 8px 16px;
     text-decoration: none;
     border-radius: 5px;
+    margin-top: 10px;
 }
 
 .footer {

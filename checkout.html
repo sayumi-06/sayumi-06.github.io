@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="./css/checkout.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="section-heading">
+            <span>Checkout </span>
+        </div>
+        <div id="orderSummary">
+            <!-- Order summary will be displayed here -->
+        </div>
+        <form id="checkoutForm">
+            <h3>Personal Details</h3>
+            <label for="name">Name :</label>
+            <input type="text" id="name" required>
+            <label for="email">Email :</label>
+            <input type="email" id="email" required>
+            <label for="phone">Phone :</label>
+            <input type="tel" id="phone" required>
+            <h3>Delivery Details</h3>
+            <label for="address">Address :</label>
+            <input type="text" id="address" required>
+            <label for="city">City :</label>
+            <input type="text" id="city" required>
+            <label for="zip">Zip Code :</label>
+            <input type="text" id="zip" required>
+            <h3>Payment Information</h3>
+            <label for="zip">Cards Accepted : </label>
+            <div class="inputBox">
+                
+                <img src="./Images/order_assets/card_img.png" alt="card">
+            </div>
+            <label for="cardNumber">Card Number :</label>
+            <input type="text" id="cardNumber" required>
+            <label for="expiryDate">Expiry Date :</label>
+            <input type="text" id="expiryDate" required>
+            <label for="cvv">CVV :</label>
+            <input type="text" id="cvv" required>
+            <button type="button" onclick="submitOrder()">Submit Payment</button>
+        </form>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const orderSummary = JSON.parse(localStorage.getItem('cart')) || [];
+            const summaryDiv = document.getElementById('orderSummary');
+
+            let total = 0;
+            orderSummary.forEach(item => {
+                const p = document.createElement('p');
+                p.textContent = `${item.product} - ${item.quantity} - Rs ${item.totalPrice.toFixed(2)}`;
+                summaryDiv.appendChild(p);
+                total += item.totalPrice;
+            });
+
+            const totalP = document.createElement('p');
+            totalP.textContent = `Total: Rs ${total.toFixed(2)}`;
+            summaryDiv.appendChild(totalP);
+        });
+
+        function submitOrder() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const address = document.getElementById('address').value;
+            const city = document.getElementById('city').value;
+            const zip = document.getElementById('zip').value;
+            const cardNumber = document.getElementById('cardNumber').value;
+            const expiryDate = document.getElementById('expiryDate').value;
+            const cvv = document.getElementById('cvv').value;
+
+            if (name && email && phone && address && city && zip && cardNumber && expiryDate && cvv) {
+                alert(`Thank you for your purchase! Your order will be delivered by ${new Date().toLocaleDateString()}.`);
+                localStorage.removeItem('cart');
+                window.location.href = 'index.html';
+            } else {
+                alert('Please fill out all fields.');
+            }
+        }
+    </script>
+</body>
+</html>

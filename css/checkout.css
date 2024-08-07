@@ -1,0 +1,156 @@
+:root {
+  --primary-color: #031601;
+  --secondary-color: #000000;
+  --background-color: #ccffc2;
+  --text-color: #333;
+  --border-radius: 10px;
+  --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: hwb(110 22% 45%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  min-height: 100vh;
+  background-image: url(../Images/checkout_assets/Untitled\ design\ \(1\).png);
+  background-size: cover;
+  background-position: center;
+  
+  width: 100%;
+}
+
+.container {
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  max-width: 700px;
+  width: 100%;
+  transform: translateY(-20px);
+}
+
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  margin-top: 20px;
+
+}
+
+.section-heading::before,
+.section-heading::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #d3d3d3; /* Light grey color for the line */
+  margin: 0 15px; /* Space between the text and the lines */
+}
+
+.section-heading span {
+  font-size: 24px;
+  font-weight: 600; /* Bold font */
+  color: #333; /* Text color */
+}
+
+h3 {
+  font-size: 18px;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 15px 20px;
+  font-size: 16px;
+  text-transform: none;
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+  border: 1px solid var(--primary-color);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.inputbox img{
+  margin-top: 30px;
+}
+#orderSummary {
+  margin-bottom: 25px;
+  padding: 20px;
+  border: 1px solid var(--background-color);
+  background-color: #ffffff;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+#orderSummary p {
+  margin: 0 0 15px;
+  font-size: 16px;
+}
+
+#orderSummary p:last-child {
+  font-weight: bold;
+  margin-top: 20px;
+  border-top: 1px solid var(--background-color);
+  padding-top: 15px;
+}
+
+button[type="button"],
+.container form .submit-btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  background: #4bb334;
+  color: #fff;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  text-transform: uppercase;
+  font-weight: 600;
+  box-shadow: var(--box-shadow);
+}
+
+button[type="button"]:hover,
+.container form .submit-btn:hover {
+  background: #81c472;
+  box-shadow: var(--box-shadow);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+}

@@ -1,73 +1,480 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Freshmart Store-order</title>
-        <!--Linking css file-->
-        <link rel="stylesheet" type="text/css" href="./css/order.css"/>
-        <link rel="icon" type="image/x-icon" href="./Images/home_assets/logo (2).png">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <link rel="stylesheet" href="./css/order.css">
+    <link rel="icon" type="image/x-icon" href="./Images/home_assets/logo (2).png">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
+    
+</head>
+<header>
+    <nav class="navigation">
+      <a href="./index.html"><img src="./Images/home_assets/logo (2).png" alt="My Grocery Store Logo" class="logo"></a>
       
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" >
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
+      <ul class="menu">
+        <li><a href="./index.html" class="active"><b>Home</b></a></li>
+        <li><a href="./about us.html"><b>About us</b></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn"><b>Category</b></a>
+          <div class="dropdown-content">
+            <a href="./vegetbles.html">Vegetables</a>
+            
+            <a href="./dairy.html">Dairy</a>
+            <a href="./cosmetics.html">Cosmetics & Skincare</a>
+          </div>
+        </li>
         
-      </head>
+        <li><a href="./order.html"><b>Order</b></a></li>
+        <li><a href="./registration.html"><b>Loyalty registration </b></a></li>
+      </ul>
+      <div class="icons">
+        <a href="./order.html" class="cart"><i class="fas fa-shopping-cart"></i><span>0</span></a>
+        <a href="./login.html" class="user"><i class="fas fa-user"></i><span>0</span></a>
+
+      </div>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+    </nav>
+  </header>
 <body>
-    <!-- Order Form Section -->
     <div class="container">
-        <form action="">
-            <div class="row">
-                <div class="col">
-                    <h3 class="title">Billing Address</h3>
-                    <div class="inputBox">
-                        <span>Full Name:</span>
-                        <input type="text" id="first-name" name="first-name" required>
-                    </div>
-                    <div class="inputBox">
-                        <span>Email:</span>
-                        <input type="email" >
-                    </div>
-                    <div class="inputBox">
-                        <span>Address:</span>
-                        <input type="text" >
-                    </div>
-
-                    <div class="flex">
-
-                        <div class="inputBox">
-                            <span>Zip Code:</span>
-                            <input type="text" placeholder="123 456">
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <h3 class="title">Payment</h3>
-                    <div class="inputBox">
-                        <span>Cards Accepted:</span>
-                        <img src="./Images/order_assets/card_img.png" alt="">
-                    </div>
-                    <div class="inputBox">
-                        <span>Name on Card:</span>
-                        <input type="text" >
-                    </div>
-                    <div class="inputBox">
-                        <span>Credit Card Number:</span>
-                        <input type="number" >
-                    </div>
-                    <div class="inputBox">
-                        <span>Exp Month:</span>
-                        <input type="text" >
-                    </div>
-
-                </div>
+        <section class="products">
+            <div class="image-container">
+                <img src="./Images/order_assets/EDITOR’s NOTE.png" alt="Your Image">
             </div>
-            <input type="submit" value="Submit Payment" class="submit-btn">
-        </form>
-    </div>    
+            <div class="section-heading">
+                <span>Fruits </span>
+            </div>
+            <div class="grid">
+                
+                <!--  products -->
+                <div class="product">
+                    <img src="./Images/fruits_assets/Mango_980.jpg" alt="mango">
+                    <h3>Mango</h3>
+                    <p class="price">Rs 980.00 per Kg</p>
+                    <input type="number" class="quantity" placeholder="Kg" min="1">
+                    <button class="add-to-cart" data-product="mango" data-price="980">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/fruits_assets/apple_200.jpg" alt="Apple">
+                    <h3>Apple - Red</h3>
+                    <p class="price">Rs 1980.00</p>
+                    <input type="number" class="quantity" placeholder="Kg" min="1">
+                    <button class="add-to-cart" data-product="Apple" data-price="1980">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/fruits_assets/dragonfruit_990.jpg" alt="Dairy Milk Ice Cream">
+                    <h3>Dragon Fruit</h3>
+                    <p class="price">Rs 990.00</p>
+                    <input type="number" class="quantity" placeholder="Kg" min="1">
+                    <button class="add-to-cart" data-product="Dragon Fruit" data-price="990">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/fruits_assets/mandarin 1830.jpg" alt="mandarin">
+                    <h3>mandarin</h3>
+                    <p class="price">Rs 1830.00 per Kg</p>
+                    <input type="number" class="quantity" placeholder="Kg" min="1">
+                    <button class="add-to-cart" data-product="Mandarin" data-price="1830">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/fruits_assets/papaya_160.jpg" alt="papaya">
+                    <h3>Papaya</h3>
+                    <p class="price">Rs 160.00 per Kg</p>
+                    <input type="number" class="quantity" placeholder="Kg" min="1">
+                    <button class="add-to-cart" data-product="Papaya" data-price="390">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/fruits_assets/prange_800.jpg" alt="orange">
+                    <h3>Orange</h3>
+                    <p class="price">Rs 800.00</p>
+                    <input type="number" class="quantity" placeholder="Kg" min="1">
+                    <button class="add-to-cart" data-product="Orange" data-price="800">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/fruits_assets/Watermelon_140.jpg" alt="Watermelon">
+                    <h3>Watermelon</h3>
+                    <p class="price">Rs 140.00</p>
+                    <input type="number" class="quantity" placeholder="Kg" min="1">
+                    <button class="add-to-cart" data-product="Watermelon" data-price="4990">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/fruits_assets/woodapple_290.jpg" alt="Woodapple">
+                    <h3>Woodapple</h3>
+                    <p class="price">Rs 290.00 per Kg</p>
+                    <input type="number" class="quantity" placeholder="Kg" min="1">
+                    <button class="add-to-cart" data-product="Woodapple " data-price="290">Add to Cart</button>
+                </div>
 
+
+            </div>
+            <div class="section-heading">
+                <span>Vegetables </span>
+            </div>
+            <div class="grid">
+                
+                <!--  products -->
+                <div class="product">
+                    <img src="./Images/vegetables_assets/onions.jpg" alt="onions">
+                    <h3>Onions</h3>
+                    <p class="price">Rs 390.00 per Kg</p>
+                    <input type="number" class="quantity" placeholder="Kg" min="1">
+                    <button class="add-to-cart" data-product="onions" data-price="390">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/vegetables_assets/pumpkin.jpg" alt="pumpkin">
+                    <h3>Pumpkin</h3>
+                    <p class="price">Rs 160.00</p>
+                    <input type="number" class="quantity" placeholder="Kg" min="1">
+                    <button class="add-to-cart" data-product=" Pumpkin  " data-price="160">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/vegetables_assets/salad leaves.jpg" alt="salad leaves">
+                    <h3>Salad leaves</h3>
+                    <p class="price">Rs 300.00</p>
+                    <input type="number" class="quantity" placeholder="Kg" min="1">
+                    <button class="add-to-cart" data-product="salad leaves" data-price="300">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/vegetables_assets/bell paper.jpg" alt="Bell Pepper">
+                    <h3>Bell Pepper</h3>
+                    <p class="price">Rs 820.00 per Kg</p>
+                    <input type="number" class="quantity" placeholder="Kg" min="1">
+                    <button class="add-to-cart" data-product="bell Pepper" data-price="290">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/vegetables_assets/coconut.jpg" alt="coconuts">
+                    <h3>Coconuts</h3>
+                    <p class="price">Rs 390.00 per Kg</p>
+                    <input type="number" class="quantity" placeholder="Kg" min="1">
+                    <button class="add-to-cart" data-product="coconuts" data-price="390">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/vegetables_assets/carrot.jpg" alt="Carrots">
+                    <h3>Carrots</h3>
+                    <p class="price">Rs 290.00</p>
+                    <input type="number" class="quantity" placeholder="Kg" min="1">
+                    <button class="add-to-cart" data-product="Carrots" data-price="290">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/vegetables_assets/brocolli.jpg" alt="brocolli">
+                    <h3>Brocolli</h3>
+                    <p class="price">Rs 1450.00</p>
+                    <input type="number" class="quantity" placeholder="Kg" min="1">
+                    <button class="add-to-cart" data-product="brocolli" data-price="1450">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/vegetables_assets/iceberg lettuce.jpg" alt="iceberg lettuce ">
+                    <h3>Iceberg Lettuce</h3>
+                    <p class="price">Rs 1460.00 per Kg</p>
+                    <input type="number" class="quantity" placeholder="Kg" min="1">
+                    <button class="add-to-cart" data-product="iceberg lettuce " data-price="290">Add to Cart</button>
+                </div>
+
+
+            </div>
+            <div class="section-heading">
+                <span>Daily produce </span>
+            </div>
+            <div class="grid">
+                
+                <!--  products -->
+                <div class="product">
+                    <img src="./Images/dairy_assets/anchor milk powder 1kg(2620).jpg" alt="anchor milk powder">
+                    <h3>Anchor Milk Powder</h3>
+                    <p class="price">Rs 2620.00</p>
+                    <input type="number" class="quantity" placeholder="Qty" min="1">
+                    <button class="add-to-cart" data-product="Anchor milk powder" data-price="2620">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/dairy_assets/kotmale mozzarella cheese 500g.jpg" alt="Kotmale Mozzarella">
+                    <h3>Kotmale Mozzarella</h3>
+                    <p class="price">Rs 1050.00</p>
+                    <input type="number" class="quantity" placeholder="Qty" min="1">
+                    <button class="add-to-cart" data-product="Kotmale Mozzarella" data-price="1050">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/dairy_assets/happy hen eggs.jpg" alt="Happy hen Eggs">
+                    <h3>Happy Hen Eggs</h3>
+                    <p class="price">Rs 644.00</p>
+                    <input type="number" class="quantity" placeholder="Qty" min="1">
+                    <button class="add-to-cart" data-product="Happy Hen Eggs" data-price="644">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/dairy_assets/anchor butter 227g.jpg" alt="Anchor Butter">
+                    <h3>Anchor Butter</h3>
+                    <p class="price">Rs 290.00 per Kg</p>
+                    <input type="number" class="quantity" placeholder="Qty" min="1">
+                    <button class="add-to-cart" data-product="Anchor butter" data-price="290">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/dairy_assets/newdale set yoghurt 640g.jpg" alt="newdale set yoghurt">
+                    <h3>Newdale set yoghurt Pack</h3>
+                    <p class="price">Rs 500.00 </p>
+                    <input type="number" class="quantity" placeholder="Qty" min="1">
+                    <button class="add-to-cart" data-product="Newdale set yoghurt Pack" data-price="500">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/dairy_assets/anchor processed cheese.jpg" alt="Anchor Milk Powder 1Kg">
+                    <h3>Anchor Milk Powder 1Kg</h3>
+                    <p class="price">Rs 2620.00</p>
+                    <input type="number" class="quantity" placeholder="Qty" min="1">
+                    <button class="add-to-cart" data-product="Anchor Milk Powder 1Kg" data-price="2620">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/dairy_assets/ambewela yoghurt.jpg" alt="ambewela yoghurt">
+                    <h3>Ambewela Yoghurt</h3>
+                    <p class="price">Rs 4990.00</p>
+                    <input type="number" class="quantity" placeholder="Qty" min="1">
+                    <button class="add-to-cart" data-product="Ambewela Yoghurt" data-price="4990">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/dairy_assets/happycow cheese.jpg" alt="happycow cheese">
+                    <h3>Happycow Cheese</h3>
+                    <p class="price">Rs 290.00</p>
+                    <input type="number" class="quantity" placeholder="Qty" min="1">
+                    <button class="add-to-cart" data-product="happycow cheese" data-price="290">Add to Cart</button>
+                </div>
+
+
+            </div>
+            <div class="section-heading">
+                <span>Meat and Seafood </span>
+            </div>
+            <div class="grid">
+                
+                <!--  products -->
+                <div class="product">
+                    <img src="./Images/meatseafood_assets/Paraw fish_1600.jpg" alt="paraw fish">
+                    <h3>Paraw Fish</h3>
+                    <p class="price">Rs 1600.00 per Kg</p>
+                    <input type="number" class="quantity" placeholder="Kg" min="1">
+                    <button class="add-to-cart" data-product="Paraw fish" data-price="1600">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/meatseafood_assets/prawns medium_2000.jpg" alt="prawns">
+                    <h3>Prawns Medium</h3>
+                    <p class="price">Rs 2000.00</p>
+                    <input type="number" class="quantity" placeholder="Kg" min="1">
+                    <button class="add-to-cart" data-product="Prawns" data-price="2000">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/meatseafood_assets/Tunafish_2190.jpg" alt="tunafish">
+                    <h3>Tuna Fish</h3>
+                    <p class="price">Rs 2190.00</p>
+                    <input type="number" class="quantity" placeholder="Kg" min="1">
+                    <button class="add-to-cart" data-product="tunafish" data-price="2190">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/meatseafood_assets/sudaya_430.jpg" alt="sudaya">
+                    <h3>sudaya</h3>
+                    <p class="price">Rs 430.00 per Kg</p>
+                    <input type="number" class="quantity" placeholder="Kg" min="1">
+                    <button class="add-to-cart" data-product="sudaya" data-price="430">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/meatseafood_assets/CrysbroChicken_1150.jpg" alt="chicken">
+                    <h3>Crysbro Chicken</h3>
+                    <p class="price">Rs 1150.00 per Kg</p>
+                    <input type="number" class="quantity" placeholder="Kg" min="1">
+                    <button class="add-to-cart" data-product="chicken" data-price="1150">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/meatseafood_assets/roasted_turkey3990.jpg" alt="turkey">
+                    <h3>Roasted Turkey</h3>
+                    <p class="price">Rs 3990.00</p>
+                    <input type="number" class="quantity" placeholder="Kg" min="1">
+                    <button class="add-to-cart" data-product="turkey" data-price="3990">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/meatseafood_assets/seerfishslices_4480.jpg" alt="Seerfish">
+                    <h3>Seerfish</h3>
+                    <p class="price">Rs 4480.00</p>
+                    <input type="number" class="quantity" placeholder="Kg" min="1">
+                    <button class="add-to-cart" data-product="seerfish" data-price="4480">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/meatseafood_assets/cleaned shrimp_2990.jpg" alt="shrimp">
+                    <h3>Cleaned shrimp</h3>
+                    <p class="price">Rs 2990.00 per Kg</p>
+                    <input type="number" class="quantity" placeholder="Kg" min="1">
+                    <button class="add-to-cart" data-product="shrimp" data-price="2990">Add to Cart</button>
+                </div>
+
+
+            </div>
+            <div class="section-heading">
+                <span>Baking and Cooking Ingredients </span>
+            </div>
+            <div class="grid">
+                
+                <!--  products -->
+                <div class="product">
+                    <img src="./Images/bakingcooking_assets/brownsugar_420.jpg" alt="Brown sugar">
+                    <h3>brown sugar</h3>
+                    <p class="price">Rs 420.00 per Kg</p>
+                    <input type="number" class="quantity" placeholder="Qty" min="1">
+                    <button class="add-to-cart" data-product="sugar" data-price="420">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/bakingcooking_assets/catchchillipieces_190.jpg" alt="chilli pieces">
+                    <h3>Catch chilli Pieces</h3>
+                    <p class="price">Rs 190.00</p>
+                    <input type="number" class="quantity" placeholder="Qty" min="1">
+                    <button class="add-to-cart" data-product="catch chilli Pieces" data-price="190">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/bakingcooking_assets/cookingsalt_415.jpg" alt="salt">
+                    <h3>Cooking salt</h3>
+                    <p class="price">Rs 415.00</p>
+                    <input type="number" class="quantity" placeholder="Qty" min="1">
+                    <button class="add-to-cart" data-product="salt" data-price="415">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/bakingcooking_assets/fortune_coconutoil1L_1390.jpg" alt="oil ">
+                    <h3>Coconut Oil</h3>
+                    <p class="price">Rs 1390.00 per Kg</p>
+                    <input type="number" class="quantity" placeholder="Qty" min="1">
+                    <button class="add-to-cart" data-product="Coconut oil " data-price="1390">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/bakingcooking_assets/icingsugar_465.jpg" alt="icing sugar">
+                    <h3>Icing sugar</h3>
+                    <p class="price">Rs 465.00 per Kg</p>
+                    <input type="number" class="quantity" placeholder="Qty" min="1">
+                    <button class="add-to-cart" data-product="Icing Sugar" data-price="465">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/bakingcooking_assets/mothabakingpowder_380.jpg" alt="Anchor Milk Powder 1Kg">
+                    <h3>Motha Baking Powder </h3>
+                    <p class="price">Rs 380.00</p>
+                    <input type="number" class="quantity" placeholder="Qty" min="1">
+                    <button class="add-to-cart" data-product="Baking Powder" data-price="380">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/bakingcooking_assets/rurmericpowder_395.jpg" alt="Turmeric Powder">
+                    <h3>Turmeric Powder</h3>
+                    <p class="price">Rs 395.00</p>
+                    <input type="number" class="quantity" placeholder="Qty" min="1">
+                    <button class="add-to-cart" data-product="Turmeric Powder" data-price="395">Add to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="./Images/bakingcooking_assets/Wheatflour_190.jpg" alt="Flour">
+                    <h3>Wheat Flour</h3>
+                    <p class="price">Rs 190.00 per Kg</p>
+                    <input type="number" class="quantity" placeholder="Qty" min="1">
+                    <button class="add-to-cart" data-product="Flour" data-price="190">Add to Cart</button>
+                </div>
+
+
+            </div>
+        </section>
+        <section class="cart">
+            <h2>Cart</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Amount</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="cartItems">
+                    <!-- Items will be dynamically added here -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total</td>
+                        <td id="totalPrice">Rs 0.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <button id="buyNow">Buy Now</button>
+            <button id="addToFavourites">Add to Favourites</button>
+            <button id="applyFavourites">Apply Favourites</button>
+            <!-- Other HTML content -->
+            <button id="clearCartButton">Clear Cart</button>
+
+            
+        </section>
+    </div>
+         
+<footer>
+    <!--Footer section-->
+    <div class="container">
+      <div class="row">
+        <div class="footer-left-corner">
+            <h3>Fresh<span>Mart</span></h3>
+            <strong>About us</strong>
+            <p>offers fresh produce and quality groceries, ensuring convenience and satisfaction. Explore our selection for your daily needs.</p>
+            <p class="footer-links">
+                <a href="./index.html">Home</a>
+                |
+                <a href="./about us.html">About</a>
+                |
+                <a href="./registration.html">Register</a>
+                |
+                <a href="./login.html">Login</a>
+            </p>
+  
+          </div>
+          
+        <div class="col-md-3">
+          <h5>Categories</h5>
+          <ul>
+            <li><a href="./vegetbles.html">Vegetables</a></li>
+            <li><a href="./dairy.html">Dairy</a></li>
+            <li><a href="./cosmetics.html">Cosmetics & Skincare</a></li>
+            
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Track Your Order</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Contact us</h5>
+          <ul>
+            <li><a href="tel:+94112512536">+94 112 512 536</a></li>
+            <li><a href="tel:+94112512219">+94 112 512 219</a></li>
+            <li><a href="tel:+94777723011">+94 777 723 011 (hotline)</a></li>
+            <li><a href="freshmart@gmail.com">freshmart@gmai.com</a></li>
+            <li>#86, Kirulapone Avenue, Colombo 05, Sri Lanka.</li>
+          </ul>
+          <div class="footer-icons">
+            <a href="https://www.facebook.com/login/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/login"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/account"><i class="fab fa-youtube"></i></a>
+        </div>
+        </div>
+  
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p>Copyright &copy; 2024 Freshmart(Private) Limited All Rights Reserved.</p>
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+        document.querySelector('.menu').classList.toggle('active');
+    });
+</script>
+    <script src="order.js"></script>
 </body>
 </html>

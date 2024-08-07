@@ -9,24 +9,26 @@
 <body>
 
     <div class="container">
-        <h2>Checkout Page</h2>
+        <div class="section-heading">
+            <span>Checkout </span>
+        </div>
         <div id="orderSummary">
             <!-- Order summary will be displayed here -->
         </div>
         <form id="checkoutForm">
             <h3>Personal Details</h3>
-            <label for="name">Name</label>
+            <label for="name">Name :</label>
             <input type="text" id="name" required>
-            <label for="email">Email</label>
+            <label for="email">Email :</label>
             <input type="email" id="email" required>
-            <label for="phone">Phone</label>
+            <label for="phone">Phone :</label>
             <input type="tel" id="phone" required>
             <h3>Delivery Details</h3>
-            <label for="address">Address</label>
+            <label for="address">Address :</label>
             <input type="text" id="address" required>
-            <label for="city">City</label>
+            <label for="city">City :</label>
             <input type="text" id="city" required>
-            <label for="zip">Zip Code</label>
+            <label for="zip">Zip Code :</label>
             <input type="text" id="zip" required>
             <h3>Payment Information</h3>
             <label for="zip">Cards Accepted : </label>
@@ -34,16 +36,16 @@
                 
                 <img src="./Images/order_assets/card_img.png" alt="card">
             </div>
-            <label for="cardNumber">Card Number</label>
+            <label for="cardNumber">Card Number :</label>
             <input type="text" id="cardNumber" required>
-            <label for="expiryDate">Expiry Date</label>
+            <label for="expiryDate">Expiry Date :</label>
             <input type="text" id="expiryDate" required>
-            <label for="cvv">CVV</label>
+            <label for="cvv">CVV :</label>
             <input type="text" id="cvv" required>
-            <button type="button" onclick="submitOrder()">Pay</button>
+            <button type="button" onclick="submitOrder()">Submit Payment</button>
         </form>
     </div>
-
+    
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const orderSummary = JSON.parse(localStorage.getItem('cart')) || [];
